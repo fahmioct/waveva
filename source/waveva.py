@@ -11,7 +11,7 @@ all_files = glob.glob(path+'*.txt')
 
 li = []
 for filename in all_files:
-    df=pd.read_csv(filename, delimiter="/t")
+    df=pd.read_csv(filename, delimiter="\t")
     li.append(df)
 
 frame = pd.concat(li, axis=0, ignore_index=True)
